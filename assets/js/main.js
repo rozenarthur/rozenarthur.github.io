@@ -204,7 +204,23 @@
 
 			});
 
+				$window.on('load', function() {
 
+				$('#two').poptrox({
+					caption: function($a) { return $a.next("a").attr("alt"); },
+					overlayColor: '#2c2c2c',
+					overlayOpacity: 0.85,
+					popupCloserText: '',
+					popupLoaderText: '',
+					selector: '.work-item .t7',
+					usePopupCaption: true,
+					usePopupDefaultStyling: false,
+					usePopupEasyClose: false,
+					usePopupNav: true,
+					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+				});
+
+				});
 
 
 
